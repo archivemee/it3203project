@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use these explanations as a quick reference while reading the two lessons.">
+  <title>Seven key concepts | Understanding HTTP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Shared navigation uses relative paths so it also works in a GitHub Pages project. -->
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span> Understanding HTTP<span class="brand-sub">A student guide to the web</span></a>
+    <nav aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="how-http-works.html">How HTTP works</a></li><li><a href="http-evolution.html">HTTP evolution</a></li><li><a href="key-concepts.html" aria-current="page">Key concepts</a></li><li><a href="references.html">References</a></li><li><a href="about.html">About</a></li></ul></nav>
+  </div></header>
+  <main id="main-content">
+    <div class="page-heading"><p class="eyebrow">Reference / Foundations</p><h1>Seven key concepts</h1><p class="lead">Use these explanations as a quick reference while reading the two lessons.</p></div>
+    <section><h2>The vocabulary of an exchange</h2><dl><dt>1. Client and server</dt><dd><p>A client initiates a request, and a server answers it. In a page load, the browser acts as a client. Proxies can forward exchanges between the browser and origin server.</p><p>Example: a browser requests a lesson from a web server.</p></dd><dt>2. Resource and URL</dt><dd><p>A resource is something an HTTP request identifies, such as a lesson, image, or application record. A URL provides an address, including a scheme, host, and path.</p><p>Example: https://example.org/lessons identifies a resource; the server may generate its representation dynamically.</p></dd><dt>3. Method</dt><dd><p>The method states the action requested by the client. Methods have defined semantics that remain recognizable across HTTP versions.</p><p>Example: GET retrieves a representation, while POST submits content for processing.</p></dd><dt>4. Status code</dt><dd><p>A three-digit code communicates the result of handling a request. Its first digit identifies the broad outcome class.</p><p>Example: 201 reports creation; 503 reports temporary service unavailability.</p></dd><dt>5. Header field</dt><dd><p>A header field carries metadata or instructions about a message. Fields can describe format, caching, authentication, and other behavior.</p><p>Example: Content-Type: application/json identifies JSON content.</p></dd><dt>6. Caching</dt><dd><p>A cache stores responses for possible reuse. Freshness and validation rules determine when a stored response may satisfy a later request.</p><p>Example: Cache-Control: max-age=600 establishes a 600-second freshness lifetime.</p></dd><dt>7. HTTPS</dt><dd><p>HTTPS protects HTTP communication using a secure transport. It helps provide confidentiality, integrity, and server authentication. It does not by itself establish that a site’s content is trustworthy.</p><p>Example: a sign-in page uses HTTPS to protect data in transit; the application still needs authorization checks.</p></dd></dl><p class="sources">Sources: <a href="references.html#ref-4">[4]</a>, <a href="references.html#ref-5">[5]</a>, <a href="references.html#ref-9">[9]</a>.</p></section><section><h2>Related example: cookies and sessions</h2><p>HTTP is stateless. Applications can maintain continuity across requests through mechanisms such as cookies. A server can set a session cookie, and the browser sends that cookie on later eligible requests.</p><p><code>Secure</code> limits cookie transmission to secure channels. <code>HttpOnly</code> prevents access through common browser scripting APIs. The application must still check the session’s validity and access permissions.</p><p class="sources">Sources: <a href="references.html#ref-10">[10]</a>.</p><a class="next-page" href="references.html">Explore the references →</a></section>
+  </main>
+  <footer class="site-footer"><div><p><strong>Understanding HTTP</strong><br>Armani Alexander · IT 3203 · Fall 2026</p><p>This website is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 at Kennesaw State University</a>.</p><a href="#main-content">Back to top ↑</a></div></footer>
+</body>
+</html>
